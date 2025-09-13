@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Bebas Neue", sans-serif;
+    background-color: #DAF222;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: #232608;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1{
+    color: #D9CDBF;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.converter-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.currency-row{
+    display: flex;
+    gap: 15px;
+    align-items: end;
+
+}
+
+.currency-input{
+    flex: 2;
+}
+
+.currency-select{
+    flex: 1;
+}
+
+input, select{
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #F2E635;
+    background-color: #F2E635;
+    border-radius: 12px;
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+}
+
+input::placeholder, select::placeholder{
+    color: #232608;
+}
+
+input:focus, select:focus{
+    outline: none;
+    border-color:#F2E635;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    color: #D9CDBF;
+    font-weight: 600;
+    text-align: left;
+}
+
+.converter-btn{
+    background-color: #F2E635;
+    color: #232608;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.converter-btn:hover{
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
+    background-color: #DAF222;
+}
+
+.loading{
+    display: none;
+    margin: 20px;
+}
+
+.spinner{
+    border: 3px solid #D9CDBF;
+    border-top: 3px solid #F2E635;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.spinner-text{
+    color: #F2E635;
+}
+
+.info{
+    margin-top: 30px;
+    font-size: 14px;
+    color: #666;
+}
+
+.result{
+    background-color: #DAF222;
+    padding: 20px;
+    margin-top: 30px;
+    color: #232608;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    display: none;
+
+}
+
+.error{
+    background-color: #DAF222;
+    color: #232608;
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: none;
+}
