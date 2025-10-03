@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "SUSE Mono", sans-serif;
+}
+body{
+    background-color: #07a0c3;
+    
+}
+
+.app{
+    background-color: #fff1d0;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 100px auto 0;
+    padding: 30px;
+    
+}
+
+.app h1{
+    font-size: 25px;
+    color: #086788;
+    font-weight: 600;
+    border-bottom: 1px solid #086788;
+    padding-bottom: 30px;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18px;
+    color: #086788;
+    font-weight: 600;
+}
+
+.answers{
+    background-color: #07a0c3;
+    color: white;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #086788;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.answers:hover:not([disabled]){
+    background-color: #086788;
+    border: 1px solid #07a0c3;
+}
+
+.answers:disabled{
+    cursor: no-drop;
+}
+
+.nxt-btn{
+    background-color: #07a0c3;
+    color: white;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.4s;
+    display: none;
+
+}
+
+.nxt-btn:hover{
+    background-color: #086788;
+}
+
+.correct{
+    background-color: #9aeabc;
+}
+
+.incorrect{
+    background-color: #ff9393;
+}
