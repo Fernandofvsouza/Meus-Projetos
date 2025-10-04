@@ -56,8 +56,17 @@ function startQuiz(){
     currentQuestionIndex = 0;
     score = 0;
     nxtBtn.innerHTML = `Proxima pergunta`
+    shuffleArray(arrayQuiz) 
     showQuestion()
 };
+
+function shuffleArray(arrayQuiz) {
+    for (let i = arrayQuiz.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [arrayQuiz[i], arrayQuiz[j]] = [arrayQuiz[j], arrayQuiz[i]];   
+    }
+    return arrayQuiz;
+}
 
 function resetState(){
     nxtBtn.style.display = "none"
@@ -71,6 +80,8 @@ function showQuestion(){
     let currentQuestion = arrayQuiz[currentQuestionIndex];
     let questionNumber = currentQuestionIndex + 1;
     question.innerHTML = `${questionNumber}.${currentQuestion.question}`
+
+    shuffleArray(currentQuestion.answers);
 
     currentQuestion.answers.forEach((answer) => {
         const button = document.createElement("button");
